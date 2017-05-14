@@ -3,11 +3,13 @@
 	<head>
 		<meta charset=utf-8 />
 		<title> Avizier examene </title>
+		<link rel="stylesheet" href="/avizier/css/style.css">
 	</head>
-
 	<body>
-		<img src=img/facultate.png alt="Cladire facultate inginerie sibiu" />
-		<img src=img/logo.png alt="Logo ULBS" />
+		<div class="header">
+			<img src=img/facultate.png alt="Cladire facultate inginerie sibiu" />
+			<img src=img/logo.png alt="Logo ULBS" />
+		</div>
 
 		<?php
 				include "connect.php";
@@ -22,8 +24,8 @@
 				{
 			?>
 
-				<li><?php echo $row_specializare['nume_specializare'];?></li>
-				<ul>
+				<li class="dropdown"><?php echo $row_specializare['nume_specializare'];?>
+				<ul class="dropdown-content">
 
 			<?php
 					$sql="SELECT grupa, id_grupa FROM grupa WHERE id_specializare=".$row_specializare['id_specializare'];
@@ -31,11 +33,12 @@
 					while($row_grupa=mysqli_fetch_array($result_grupa,MYSQLI_ASSOC))
 					{
 			?>
-						<li><?php echo $row_grupa['grupa'];?></li>
+						<li><?php echo "<a href='examene.php?id_grupa=".$row_grupa['id_grupa']."'>".$row_grupa['grupa']."</a>";?></li>
 			<?php
 					}
 			?>
 				</ul>
+			</li>
 			<?php
 				}
 
