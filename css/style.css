@@ -17,6 +17,11 @@
     display: block;
 }
 
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
 .header {
     margin: 0 auto;
 }
@@ -26,10 +31,23 @@ a {
     text-decoration: none;
 }
 
-li:hover {
+ul.menu li:hover {
     background-color: #e6e6e6;
 }
 
 li {
     list-style: none;
+}
+
+.table {
+    display: table;
+}
+
+.row  {
+    display: table-row;
+}
+
+.column {
+    display: table-cell;
+    padding: 15px;
 }
