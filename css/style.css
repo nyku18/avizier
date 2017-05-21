@@ -41,6 +41,7 @@ li {
 
 .table {
     display: table;
+    text-align: center;
 }
 
 .row  {
@@ -50,4 +51,16 @@ li {
 .column {
     display: table-cell;
     padding: 15px;
+}
+
+.red_text{
+    color:red;
+}
+
+.blue_text{
+    color:blue;
+}
+
+h1{
+    text-align: center;
 }
