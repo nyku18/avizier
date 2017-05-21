@@ -64,3 +64,44 @@ li {
 h1{
     text-align: center;
 }
+
+.button_insert{
+    background-color: #0F3066;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.button_yellow{
+    background-color: #F7F1D1;
+    border: 1px solid black;
+    padding: 3px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.button{
+    background-color: #0F3066;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+label{
+    font-size: 20px;
+    display:block;
+    margin-top: 10px;
+}

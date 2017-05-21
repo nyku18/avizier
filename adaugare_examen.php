@@ -9,5 +9,10 @@
 
     $sql="INSERT INTO examen(data,sala,id_materie,id_grupa) VALUES('$data', '$sala', '$id_materie', '$id_grupa')";
     $result=mysqli_query($connection, $sql);
-    
+
+    if($result)
+  		header("Location: lista_examene.php");
+  	else
+  		echo "Eroare".mysqli_error($connection);
+
  ?>

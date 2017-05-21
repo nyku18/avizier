@@ -12,6 +12,8 @@
 
 	 <h1>EXAMENE</h1>
 
+	 <a class="button_insert" href=form_adaugare_examen.php>Adaugă examen</a>
+
      <ul class="table">
 
        <?php
@@ -41,11 +43,11 @@
 	          </div>
 
 						<div class="column">
-	            <?php echo "<a class='red_text' href='sterge_examen.php?id_examen=".$row_examen['id_examen']. "'>Șterge</a>";?>
+	            <?php echo "<a class='red_text button_yellow' href='sterge_examen.php?id_examen=".$row_examen['id_examen']. "'>Șterge</a>";?>
 	          </div>
 
 						<div class="column">
-	            <?php echo "<a class='blue_text' href='form_modifica_examen.php?id_examen=".$row_examen['id_examen']. "'>Modifică</a>";?>
+	            <?php echo "<a class='blue_text button_yellow' href='form_modifica_examen.php?id_examen=".$row_examen['id_examen']. "'>Modifică</a>";?>
 	          </div>
 
 	        </li>

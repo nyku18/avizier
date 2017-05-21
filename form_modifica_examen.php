@@ -54,7 +54,7 @@
 
     <label>Sala </label> <input type=text name="sala" required value="<?php echo $row_examen['sala']; ?>"> <br>
 
-		<input type=submit value=MODIFICĂ>
+		<input class="button" type=submit value=MODIFICĂ>
 
 <?php
 		include "footer.php";

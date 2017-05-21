@@ -46,7 +46,7 @@
 
     <label>Sala </label> <input type=text name="sala" required> <br>
 
-		<input type=submit value=TRIMITE>
+		<input class="button" type=submit value=ADAUGĂ>
 
 <?php
 		include "footer.php";
