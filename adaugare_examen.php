@@ -14,5 +14,4 @@
   		header("Location: lista_examene.php");
   	else
   		echo "Eroare".mysqli_error($connection);
-
  ?>
