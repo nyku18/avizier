@@ -48,6 +48,8 @@
 
 		<input class="button" type=submit value=ADAUGĂ>
 
+	</form>
+
 <?php
 		include "footer.php";
  ?>

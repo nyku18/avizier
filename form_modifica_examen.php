@@ -56,6 +56,8 @@
 
 		<input class="button" type=submit value=MODIFICĂ>
 
+	</form>
+
 <?php
 		include "footer.php";
  ?>

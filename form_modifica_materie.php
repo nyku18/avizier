@@ -12,9 +12,11 @@
 
 			?>
 
-			<label> Materie </label> <input type=text name="materie" required value="<?php echo $row_materie['nume_materie']; ?>"> <br>
+		<label> Materie </label> <input type=text name="materie" required value="<?php echo $row_materie['nume_materie']; ?>"> <br>
 
-			<input class="button" type=submit value=MODIFICĂ>
+		<input class="button" type=submit value=MODIFICĂ>
+
+	</form>
 
 <?php
 	include "footer.php";

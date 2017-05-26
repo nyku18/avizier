@@ -11,6 +11,8 @@
 
    <input class="button" type=submit value=AUTENTIFICARE>
 
+  </form>
+
  <?php
  	include"footer.php";
  ?>
