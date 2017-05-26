@@ -105,3 +105,16 @@ label{
     display:block;
     margin-top: 10px;
 }
+
+.button_choose{
+    background-color: #0F3066;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 175px;
+    margin-top: 20px;
+}
