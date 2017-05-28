@@ -3,6 +3,11 @@
 ?>
 
  <?php
+ session_start();
+
+ if($_SESSION['logat']==1)
+ {
+
        include "connect.php";
        $sql="SELECT id_materie, nume_materie FROM materie";
 
@@ -13,7 +18,19 @@
 
    <a class="button_insert" href=form_adaugare_materie.php>Adaugă materie</a>
 
+	 <a class="button_logout_lista_materie" href=logout.php>Log Out</a>
+
        <ul class="table">
+
+				 <li class="row">
+					 <div class="column table_head">
+						 <?php echo 'Nr. crt.'; ?>
+					 </div>
+
+					 <div class="column table_head">
+						 <?php echo 'Materia';?>
+					 </div>
+				 </li>
 
        <?php
 			 		$i=1;
@@ -44,6 +61,15 @@
 	       }
  ?>
      </ul>
+
+		 <?php
+			 }
+
+		 else
+		 {
+				 header("Location:form_login.php");
+		 }
+		 ?>
 
   <?php
  		include "footer.php";

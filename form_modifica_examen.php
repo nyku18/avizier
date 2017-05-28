@@ -6,6 +6,12 @@
 			<input type="hidden" name="id_examen" value="<?php echo $_GET['id_examen']; ?>">
 
 			<?php
+
+			session_start();
+
+		  if($_SESSION['logat']==1)
+		  {
+
 				include "connect.php";
 				$sql="SELECT * FROM examen WHERE id_examen=" . $_GET['id_examen'];
 				$result_examen=mysqli_query($connection, $sql);
@@ -31,6 +37,8 @@
             </select>
         <?php } ?>
 
+		<a class="button_logout_examen" href=logout.php>Log Out</a>
+
 		<label>Materia </label>
       <?php
         $sql="SELECT * FROM materie";
@@ -55,6 +63,15 @@
     <label>Sala </label> <input type=text name="sala" required value="<?php echo $row_examen['sala']; ?>"> <br>
 
 		<input class="button" type=submit value=MODIFICĂ>
+
+		<?php
+			}
+
+		else
+		{
+				header("Location:form_login.php");
+		}
+		?>
 
 	</form>
 

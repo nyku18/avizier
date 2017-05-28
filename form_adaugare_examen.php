@@ -5,6 +5,12 @@
 		<form action=adaugare_examen.php method=POST>
       <label>Grupa </label>
         <?php
+
+				session_start();
+
+			  if($_SESSION['logat']==1)
+			  {
+
           include "connect.php";
           $sql="SELECT * FROM grupa";
           $result_grupa=mysqli_query($connection, $sql);
@@ -22,6 +28,8 @@
           <?php } ?>
             </select>
         <?php } ?>
+
+		<a class="button_logout_examen" href=logout.php>Log Out</a>
 
 		<label>Materia </label>
       <?php
@@ -47,6 +55,15 @@
     <label>Sala </label> <input type=text name="sala" required> <br>
 
 		<input class="button" type=submit value=ADAUGĂ>
+
+		<?php
+			}
+
+		else
+		{
+				header("Location:form_login.php");
+		}
+		?>
 
 	</form>
 

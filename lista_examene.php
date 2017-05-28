@@ -3,6 +3,11 @@
  ?>
 
    <?php
+	 session_start();
+
+	 if($_SESSION['logat']==1)
+	 {
+
        include "connect.php";
        $sql="SELECT id_examen,data,sala,nume_materie,grupa FROM examen
               JOIN materie ON materie.id_materie=examen.id_materie
@@ -14,7 +19,31 @@
 
 	 <a class="button_insert" href=form_adaugare_examen.php>Adaugă examen</a>
 
+	 <a class="button_logout_lista_examen" href=logout.php>Log Out</a>
+
      <ul class="table">
+
+			 <li class="row">
+				 <div class="column table_head">
+					 <?php echo 'Nr. crt.'; ?>
+				 </div>
+
+				 <div class="column table_head">
+					 <?php echo 'Grupa';?>
+				 </div>
+
+				 <div class="column table_head">
+					 <?php echo 'Materia';?>
+				 </div>
+
+				 <div class="column table_head">
+					 <?php echo 'Data';?>
+				 </div>
+
+				 <div class="column table_head">
+					 <?php echo 'Sala';?>
+				 </div>
+			 </li>
 
        <?php
 			 		$i=1;
@@ -56,6 +85,14 @@
 	       }
  			 	 ?>
      </ul>
+	 <?php
+ 		}
+
+		else
+		{
+				header("Location:form_login.php");
+		}
+		?>
 
  <?php
  		include "footer.php";

@@ -1,6 +1,9 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    font-size: 25px;
+    margin-right: 55px;
+    margin-top: 10px;
 }
 
 .dropdown-content {
@@ -115,6 +118,56 @@ label{
     display: inline-block;
     font-size: 25px;
     font-weight: bold;
-    margin-left: 175px;
+    margin-left: 103px;
     margin-top: 20px;
+}
+
+.button_logout_admin{
+    color: #0F3066;
+    margin-left: 175px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #F7F1D1;
+    border: 1px solid black;
+}
+
+.button_logout_lista_examen{
+    color: #0F3066;
+    margin-left: 560px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #F7F1D1;
+    border: 1px solid black;
+}
+
+.button_logout_examen{
+    color: #0F3066;
+    margin-left: 700px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #F7F1D1;
+    border: 1px solid black;
+}
+
+.button_logout_lista_materie{
+    color: #0F3066;
+    margin-left: 535px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #F7F1D1;
+    border: 1px solid black;
+}
+
+.button_logout_materie{
+    color: #0F3066;
+    margin-left: 660px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #F7F1D1;
+    border: 1px solid black;
+}
+
+.table_head{
+    font-size: 20px;
+    font-weight: bold;
 }

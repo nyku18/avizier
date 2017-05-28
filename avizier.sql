@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 14 Mai 2017 la 14:03
+-- Generation Time: 28 Mai 2017 la 14:12
 -- Versiune server: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -23,6 +23,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structura de tabel pentru tabelul `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(1) NOT NULL,
+  `user` varchar(100) NOT NULL,
+  `parola` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Salvarea datelor din tabel `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `user`, `parola`) VALUES
+(1, 'administrator', 'inginerie');
+
+-- --------------------------------------------------------
+
+--
 -- Structura de tabel pentru tabelul `examen`
 --
 
@@ -33,6 +52,21 @@ CREATE TABLE `examen` (
   `id_materie` int(11) NOT NULL,
   `id_grupa` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Salvarea datelor din tabel `examen`
+--
+
+INSERT INTO `examen` (`id_examen`, `data`, `sala`, `id_materie`, `id_grupa`) VALUES
+(5, '2017-05-09', 'IE332', 1, 1),
+(6, '2017-05-31', 'IM201', 5, 4),
+(7, '2017-05-24', 'IE541', 7, 3),
+(8, '2017-06-14', 'IM231', 12, 5),
+(9, '2017-05-17', 'IE123', 4, 3),
+(10, '2017-05-17', 'IE331', 11, 5),
+(11, '2017-06-21', 'IE551', 5, 3),
+(13, '2017-06-13', 'IM002', 3, 2),
+(14, '2017-05-03', 'dsadc', 4, 2);
 
 -- --------------------------------------------------------
 
@@ -74,29 +108,18 @@ CREATE TABLE `materie` (
 
 INSERT INTO `materie` (`id_materie`, `nume_materie`) VALUES
 (1, 'Tehnici de programare'),
-(2, 'Interfeţe şi protocoale de Comunicaţii'),
+(2, 'Interfeţe şi protocoale de comunicaţii'),
 (3, 'Programarea aplicaţiilor grafice'),
 (4, 'Dezvoltarea aplicaţiilor WEB'),
 (5, 'Electronică digitală'),
 (6, 'Măsurări şi achiziţii de date'),
 (7, 'Limba engleză'),
 (8, 'Limba germană'),
-(9, 'Ingineria sistemelor de programare'),
 (10, 'Grafică asistată de calculator'),
 (11, 'Tehnologii WEB'),
-(12, 'Măsurări și traductoare');
-
--- --------------------------------------------------------
-
---
--- Structura de tabel pentru tabelul `materie_specializare`
---
-
-CREATE TABLE `materie_specializare` (
-  `id_materie_specializare` int(11) NOT NULL,
-  `id_materie` int(11) NOT NULL,
-  `id_specializare` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+(12, 'Măsurări și traductoare'),
+(15, 'Structuri de date'),
+(14, 'Metode numerice');
 
 -- --------------------------------------------------------
 
@@ -123,6 +146,12 @@ INSERT INTO `specializare` (`id_specializare`, `nume_specializare`) VALUES
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
 -- Indexes for table `examen`
 --
 ALTER TABLE `examen`
@@ -141,12 +170,6 @@ ALTER TABLE `materie`
   ADD PRIMARY KEY (`id_materie`);
 
 --
--- Indexes for table `materie_specializare`
---
-ALTER TABLE `materie_specializare`
-  ADD PRIMARY KEY (`id_materie_specializare`);
-
---
 -- Indexes for table `specializare`
 --
 ALTER TABLE `specializare`
@@ -157,10 +180,15 @@ ALTER TABLE `specializare`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `examen`
 --
 ALTER TABLE `examen`
-  MODIFY `id_examen` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_examen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `grupa`
 --
@@ -170,12 +198,7 @@ ALTER TABLE `grupa`
 -- AUTO_INCREMENT for table `materie`
 --
 ALTER TABLE `materie`
-  MODIFY `id_materie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
---
--- AUTO_INCREMENT for table `materie_specializare`
---
-ALTER TABLE `materie_specializare`
-  MODIFY `id_materie_specializare` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_materie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `specializare`
 --

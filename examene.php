@@ -14,6 +14,24 @@
 
 	<ul class="table">
 
+		<li class="row">
+			<div class="column table_head">
+				<?php echo 'Nr.crt.'; ?>
+			</div>
+
+			<div class="column table_head">
+				<?php echo 'Materia';?>
+			</div>
+
+			<div class="column table_head">
+				<?php echo 'Data';?>
+			</div>
+
+			<div class="column table_head">
+				<?php echo 'Sala';?>
+			</div>
+		</li>
+
     <?php
 
 		 $i=1;
