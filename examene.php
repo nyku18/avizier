@@ -16,7 +16,7 @@
 
 		<li class="row">
 			<div class="column table_head">
-				<?php echo 'Nr.crt.'; ?>
+				<?php echo 'Nr. crt.'; ?>
 			</div>
 
 			<div class="column table_head">
